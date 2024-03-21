@@ -101,11 +101,13 @@ class class_main_menu():
             item = self.item2-(default_timer() - start)
             if item > 0.0:
                 #time.sleep(item)
-                pygame.time.delay(int(item*0.4*1000))
-      
-       
+                pygame.time.delay(int(item*1000))
+
+
 
             self.t_shift = default_timer()-start
+
+
 
 
 
@@ -207,7 +209,8 @@ class class_main_menu():
                     if self.menu_select < 2:
                         self.menu_select += 1
 
-                if e.key == pygame.K_KP_ENTER:
+                if e.key == pygame.K_RETURN:
+                    print(1)
                     if self.menu_select == 2:
                         pygame.quit()
                     elif self.menu_select == 0:
